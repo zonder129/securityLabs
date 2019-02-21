@@ -1,0 +1,2 @@
+# calculate hash and write it to file
+openssl sha256 fileToEncrypt.txt >> hash.txt

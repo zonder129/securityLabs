@@ -1,0 +1,25 @@
+[ req ]
+# Секция основных опций
+default_bits = 2048
+# Число бит
+default_keyfile = secret.pem
+# Имя ключа, используемого для сертификата 
+distinguished_name = req_distinguished_name
+# DN организации, выдавшей сертификат
+prompt = no
+# Брать параметры из конфига неинтерактивный режим
+[ req_distinguished_name ]
+# DN организации
+CN=RU
+# Страна
+ST=MO
+# Область
+L=Moscow
+# Город
+O=BMSTU
+# Название организации
+OU=RK6
+# Название отделения
+CN=Your personal certificate
+# Имя для сертификата (персоны, получающей сертификат) emailAddress=certificate@maildomain.ru
+# Эл. почта организации

@@ -1,0 +1,2 @@
+# all required files in folder 'certificate' 
+openssl smime -sign -in fileToSign.txt -signer selfSignedCertificate.pem -inkey rsaKey.pem -out result.txt

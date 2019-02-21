@@ -1,0 +1,9 @@
+past your config by common template in ‘config.txt’ 
+# create certificate request
+openssl req -new -newkey rsa:2048 -keyout rsaKey.pem -config config.txt -out certReq.pem
+
+# create selfsigned certificate by request
+openssl x509 -req -in certReq.pem -signkey rsaKey.pem -out selfSignedCertificate.pem
+
+# see information about certificate
+openssl x509 -in selfSignedCertificate.pem -noout -text

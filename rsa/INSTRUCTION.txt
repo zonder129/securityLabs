@@ -1,0 +1,14 @@
+# generate secret key
+openssl genrsa -out ./secret.pem -des3
+
+# generate public key
+openssl rsa -in ./secret.pem -out ./public.pem
+
+# create any file
+nano fileToEncrypt.txt
+
+# encrypt file with des3
+openssl des3 -in ./fileToEncrypt.txt -out ./encryptedFile.des3
+
+# decrypt file with des3
+openssl des3 -d -in encryptedFile.des3 -out decryptedFile.txt
